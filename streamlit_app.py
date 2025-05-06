@@ -5,10 +5,9 @@ from scipy.spatial import cKDTree
 import folium
 from streamlit_folium import st_folium
 
-# GitHub 경로 (사용자 경로로 수정 필요)
-road_url = "https://raw.githubusercontent.com/annemayer30/NOO/main/도로지점 위경도.xlsx"
-lamp_url = "https://raw.githubusercontent.com/annemayer30/NOO/main/가로등 위치 정보.xlsx"
-traffic_url = "https://raw.githubusercontent.com/annemayer30/NOO/main/2024_서울시_일일 총 교통량.xlsx"
+road_url = "https://raw.githubusercontent.com/annemayer30/NOO/main/%EB%8F%84%EB%A1%9C%EC%A7%80%EC%A0%90%20%EC%9C%84%EA%B2%BD%EB%8F%84.xlsx"
+lamp_url = "https://raw.githubusercontent.com/annemayer30/NOO/main/%EA%B0%80%EB%A1%9C%EB%93%B1%20%EC%9C%84%EC%B9%98%20%EC%A0%95%EB%B3%B4.xlsx"
+traffic_url = "https://raw.githubusercontent.com/annemayer30/NOO/main/2024_%EC%84%9C%EC%9A%B8%EC%8B%9C_%EC%9D%BC%EC%9D%BC%20%EC%B4%9D%20%EA%B5%90%ED%86%B5%EB%9F%89.xlsx"
 
 # 사용자 입력
 st.sidebar.header("입력 값 설정")
