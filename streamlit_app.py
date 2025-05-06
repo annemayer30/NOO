@@ -99,18 +99,18 @@ def create_map(df, rank_col):
         ).add_to(m)
     return m
 
-col1, col2 = st.columns(2)
-with col1:
-    st.subheader("🚗 교통량 순위 지도")
-    st_folium(create_map(mapped_df, "교통량_순위"), height=400, width=500)
+st.subheader("🚗 교통량 순위 지도")
+st_folium(create_map(mapped_df, "교통량_순위"), height=400, width=700)
 
-with col2:
-    st.subheader("📶 상대교통량 순위 지도")
-    st_folium(create_map(mapped_df, "상대교통량_순위"), height=400, width=500)
+st.markdown("<hr style='margin:30px 0;'>", unsafe_allow_html=True)
+
+st.subheader("📶 상대교통량 순위 지도")
+st_folium(create_map(mapped_df, "상대교통량_순위"), height=400, width=700)
+
+st.markdown("<hr style='margin:30px 0;'>", unsafe_allow_html=True)
 
 # 표 출력
 st.subheader("📋 지점별 분석 결과 요약")
 summary_df = merged[["지점 위치", "가로등개수", "교통량", "상대교통량", "생산전력량_Wh", "점등가로등수"]]
 summary_df["상대교통량"] = summary_df["상대교통량"].astype(int)
 st.dataframe(summary_df, use_container_width=True)
-
